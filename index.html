@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B16 Ventures | System Integrator in Bengaluru</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="B16 Ventures is a trusted system integrator in Bengaluru offering CCTV, Networking, Biometric and Access Control solutions for enterprises and institutions.">
+    <meta name="keywords" content="System Integrator Bengaluru, CCTV Installation, Networking Solutions, Biometric Attendance, Access Control Systems">
+    <meta name="author" content="B16 Ventures">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVBAR */
+        header {
+            background: #0b1d3a;
+            padding: 18px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 46px;
+        }
+
+        .logo span {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 30px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #00c6ff;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* HERO */
+        .editorial-hero {
+            background: #f1f4f8;
+            padding: 90px 0;
+        }
+
+        .editorial-hero h1 {
+            font-size: 44px;
+            margin-bottom: 18px;
+        }
+
+        .editorial-hero p {
+            font-size: 18px;
+            color: #444;
+            max-width: 850px;
+        }
+
+        /* CONTENT */
+        .editorial-content {
+            padding: 70px 0;
+        }
+
+        .editorial-content h2 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .editorial-content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        /* FEATURED SERVICES */
+        .featured-services {
+            background: #ffffff;
+            padding: 80px 0;
+        }
+
+        .featured-services h2 {
+            font-size: 34px;
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            background: #f8f9fb;
+            padding: 35px;
+            border-radius: 10px;
+            border-left: 6px solid #003566;
+        }
+
+        .service-box i {
+            font-size: 36px;
+            color: #003566;
+            margin-bottom: 15px;
+        }
+
+        .service-box h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 15px;
+            color: #555;
+        }
+
+        /* CAPABILITY STRIP */
+        .capability-strip {
+            background: #003566;
+            color: #fff;
+            padding: 55px 0;
+        }
+
+        .capability-strip .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .capability h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .capability p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: #f1f4f8;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .cta-btn {
+            background: #003566;
+            color: #fff;
+            padding: 15px 36px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background: #001f3f;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 80px 0;
+        }
+
+        .contact-box {
+            background: #ffffff;
+            padding: 45px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-box button {
+            background: #003566;
+            color: #fff;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0b1d3a;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #00c6ff;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 25px;
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="assets/images/logo.png" alt="B16 Ventures Logo">
+        <span>B16 Ventures</span>
+    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="editorial-hero" id="home">
+    <div class="container">
+        <h1>Trusted System Integrator in Bengaluru</h1>
+        <p>
+            B16 Ventures is a professional system integrator delivering secure,
+            scalable and future-ready CCTV, networking, biometric and access control
+            solutions for enterprises, institutions and residential communities.
+        </p>
+    </div>
+</section>
+
+<section class="editorial-content">
+    <div class="container">
+        <h2>Driving Secure & Scalable Infrastructure</h2>
+        <p>
+            In an increasingly connected digital world, organizations require
+            reliable security and IT infrastructure. B16 Ventures partners with
+            businesses to design, deploy and maintain integrated systems that
+            ensure safety, efficiency and operational continuity.
+        </p>
+        <p>
+            Our solutions are engineered with enterprise-grade components,
+            industry best practices and long-term scalability in mind.
+        </p>
+    </div>
+</section>
+
+<section class="featured-services" id="services">
+    <div class="container">
+        <h2>Our Core System Integration Services</h2>
+
+        <div class="service-grid">
+
+            <div class="service-box">
+                <i class="fas fa-video"></i>
+                <h3>CCTV Surveillance Systems</h3>
+                <p>Design, installation and maintenance of IP & analog CCTV systems with remote monitoring.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-network-wired"></i>
+                <h3>Structured Networking</h3>
+                <p>LAN, fiber cabling, Wi-Fi solutions, switches, racks and firewall-ready infrastructure.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-fingerprint"></i>
+                <h3>Biometric Attendance</h3>
+                <p>Fingerprint and face recognition attendance systems with reporting and payroll integration.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-door-closed"></i>
+                <h3>Access Control Systems</h3>
+                <p>RFID, biometric and smart door access solutions for offices and residential complexes.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="capability-strip">
+    <div class="container">
+        <div class="capability">
+            <h4>Enterprise-Grade Design</h4>
+            <p>Solutions aligned with global IT & security standards.</p>
+        </div>
+        <div class="capability">
+            <h4>End-to-End Execution</h4>
+            <p>Consultation, deployment, testing and support.</p>
+        </div>
+        <div class="capability">
+            <h4>Experienced Engineers</h4>
+            <p>Certified professionals with hands-on expertise.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Looking for a Reliable System Integrator?</h2>
+        <p>Partner with B16 Ventures to build secure and scalable infrastructure.</p>
+        <a href="#contact" class="cta-btn">Request Consultation</a>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-box">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number">
+                <textarea rows="4" placeholder="Your Requirement"></textarea>
+                <button type="submit">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 <span>B16 Ventures</span> | System Integrator – Bengaluru
+</footer>
+
+</body>
+</html>

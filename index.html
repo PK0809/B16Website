@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,6 +8,7 @@
 <meta name="description" content="B16 Ventures provides enterprise CCTV, Networking, Biometric and Access Control solutions in Bengaluru.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 :root{
@@ -59,17 +60,22 @@ header{
 }
 
 .logo img{
-    height:44px;
+    height:54px;
 }
 
 .logo span{
     font-weight:700;
-    font-size:20px;
+    font-size:28px;
     color:var(--primary);
 }
 
+nav{
+    display:flex;
+    align-items:center;
+}
+
 nav a{
-    margin-left:30px;
+    margin-left:22px;
     font-size:15px;
     font-weight:500;
     color:#333;
@@ -77,6 +83,11 @@ nav a{
 
 nav a:hover{
     color:var(--accent);
+}
+
+.phone{
+    font-weight:600;
+    color:var(--primary);
 }
 
 /* HERO */
@@ -171,7 +182,7 @@ section{
     color:#555;
 }
 
-/* SPLIT SECTION */
+/* SPLIT */
 .split{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -184,30 +195,24 @@ section{
     border-radius:16px;
 }
 
+/* CONTACT */
+.contact-details{
+    margin-top:20px;
+    font-size:18px;
+}
+
+.contact-details a{
+    display:block;
+    margin-top:8px;
+    color:#fff;
+    font-weight:500;
+}
+
 /* CTA */
 .cta{
     background:var(--primary);
     color:#fff;
     text-align:center;
-}
-
-.cta h2{
-    font-size:36px;
-    margin-bottom:14px;
-}
-
-.cta p{
-    opacity:.9;
-}
-
-.cta a{
-    display:inline-block;
-    margin-top:22px;
-    background:#fff;
-    color:var(--primary);
-    padding:14px 36px;
-    border-radius:30px;
-    font-weight:600;
 }
 
 /* FOOTER */
@@ -216,6 +221,28 @@ footer{
     color:#aaa;
     text-align:center;
     padding:26px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    box-shadow:0 6px 20px rgba(0,0,0,.3);
+    z-index:9999;
+}
+
+.whatsapp-float:hover{
+    background:#1ebe5d;
 }
 
 @media(max-width:900px){
@@ -228,6 +255,79 @@ footer{
         font-size:36px;
     }
 }
+/* ENQUIRY FORM */
+.enquiry-section{
+    background:#f4f6f9;
+}
+
+.enquiry-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.enquiry-info h2{
+    font-size:36px;
+    margin-bottom:12px;
+}
+
+.enquiry-info p{
+    color:#555;
+    font-size:16px;
+}
+
+.contact-highlight{
+    margin-top:20px;
+    font-size:18px;
+}
+
+.contact-highlight a{
+    color:#0b1d3a;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.enquiry-form{
+    background:#fff;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:14px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+.enquiry-form button{
+    width:100%;
+    padding:14px;
+    background:#0b1d3a;
+    color:#fff;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.enquiry-form button:hover{
+    background:#001f3f;
+}
+
+@media(max-width:900px){
+    .enquiry-grid{
+        grid-template-columns:1fr;
+    }
+}
+
 </style>
 </head>
 
@@ -242,6 +342,9 @@ footer{
         <nav>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
+            <a href="tel:+919169168216" class="phone">
+                <i class="fas fa-phone"></i> +91-916 916 8216
+            </a>
         </nav>
     </div>
 </header>
@@ -253,8 +356,7 @@ footer{
             <h1>Enterprise Network & Security Integration</h1>
             <p>
                 B16 Ventures delivers secure, scalable and enterprise-grade
-                CCTV, networking, biometric and access control solutions
-                for modern organizations.
+                CCTV, networking, biometric and access control solutions.
             </p>
             <a href="#contact">Talk to an Expert</a>
         </div>
@@ -274,57 +376,84 @@ footer{
             <div class="service-card">
                 <img src="assets/images/cctv.jpg">
                 <h3>CCTV Surveillance</h3>
-                <p>IP & analog surveillance systems with monitoring and analytics.</p>
+                <p>IP & analog surveillance systems with monitoring.</p>
             </div>
 
             <div class="service-card">
                 <img src="assets/images/networking.jpg">
                 <h3>Networking</h3>
-                <p>LAN, Wi-Fi, fiber, switching and secure connectivity.</p>
+                <p>LAN, Wi-Fi, fiber & secure connectivity.</p>
             </div>
 
             <div class="service-card">
                 <img src="assets/images/biometric.jpg">
                 <h3>Biometric Systems</h3>
-                <p>Attendance and access automation using biometrics.</p>
+                <p>Attendance & access automation.</p>
             </div>
 
             <div class="service-card">
                 <img src="assets/images/access-control.jpg">
                 <h3>Access Control</h3>
-                <p>Smart door access with RFID and biometric technologies.</p>
+                <p>Smart RFID & biometric access systems.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- SPLIT CONTENT -->
-<section>
-    <div class="container split">
-        <img src="assets/images/networking.jpg" alt="Data Center">
-        <div>
-            <h2>Built for Enterprise Environments</h2>
+<!-- ENQUIRY FORM -->
+<section class="enquiry-section" id="enquiry">
+    <div class="container enquiry-grid">
+
+        <div class="enquiry-info">
+            <h2>Enquiry Form</h2>
             <p>
-                Our solutions follow industry best practices and are
-                designed to integrate seamlessly into enterprise
-                IT and security ecosystems.
+                Share your requirement and our team will contact you shortly.
+            </p>
+
+            <p class="contact-highlight">
+                📞 <a href="tel:+919169168216">+91-916 916 8216</a><br>
+                💬 <a href="https://wa.me/919169168216" target="_blank">WhatsApp Us</a><br>
+                ✉️ <a href="mailto:info@b16ventures.com">info@b16ventures.com</a>
             </p>
         </div>
-    </div>
-</section>
 
-<!-- CTA -->
-<section class="cta" id="contact">
-    <div class="container">
-        <h2>Let’s Build Secure Infrastructure</h2>
-        <p>Partner with B16 Ventures for enterprise-ready solutions.</p>
-        <a href="mailto:info@b16ventures.com">Contact Us</a>
-    </div>
-</section>
+        <form class="enquiry-form"
+            action="https://formspree.io/f/xkorzwjl"
+            method="POST">
+
+            <input type="hidden" name="_redirect" value="thank-you.html">
+            <input type="hidden" name="_subject" value="New Enquiry - B16 Ventures">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <input type="text" name="name" placeholder="Full Name *" required>
+            <input type="email" name="email" placeholder="Email Address *" required>
+            <input type="tel" name="phone" placeholder="Phone Number">
+
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option>CCTV Surveillance</option>
+                <option>Networking</option>
+                <option>Biometric Systems</option>
+                <option>Access Control</option>
+            </select>
+
+            <textarea name="message" rows="4" placeholder="Describe your requirement"></textarea>
+
+            <button type="submit">Submit Enquiry</button>
+        </form>
+
+
+            </div>
+        </section>
 
 <footer>
-    © 2026 B16 Ventures | System Integrator – Bengaluru
+    © 2026 B16 Ventures | All rights reserved
 </footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/919169168216" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>

@@ -1,386 +1,329 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>B16 Ventures | System Integrator in Bengaluru</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>B16 Ventures | System Integrator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <meta name="description" content="B16 Ventures is a trusted system integrator in Bengaluru offering CCTV, Networking, Biometric and Access Control solutions for enterprises and institutions.">
-    <meta name="keywords" content="System Integrator Bengaluru, CCTV Installation, Networking Solutions, Biometric Attendance, Access Control Systems">
-    <meta name="author" content="B16 Ventures">
+<meta name="description" content="B16 Ventures provides enterprise CCTV, Networking, Biometric and Access Control solutions in Bengaluru.">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<style>
+:root{
+    --primary:#0b1d3a;
+    --accent:#0056b3;
+    --light:#f4f6f9;
+    --text:#222;
+}
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+body{
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+}
 
-        body {
-            background: #ffffff;
-            color: #222;
-            line-height: 1.7;
-        }
+.container{
+    max-width:1240px;
+    margin:auto;
+    padding:0 28px;
+}
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+/* HEADER */
+header{
+    background:#fff;
+    border-bottom:1px solid #eee;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        /* NAVBAR */
-        header {
-            background: #0b1d3a;
-            padding: 18px 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+.navbar{
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
 
-        .logo img {
-            height: 46px;
-        }
+.logo img{
+    height:44px;
+}
 
-        .logo span {
-            color: #fff;
-            font-size: 20px;
-            font-weight: 700;
-        }
+.logo span{
+    font-weight:700;
+    font-size:20px;
+    color:var(--primary);
+}
 
-        nav a {
-            color: #fff;
-            margin-left: 30px;
-            font-size: 15px;
-            font-weight: 500;
-        }
+nav a{
+    margin-left:30px;
+    font-size:15px;
+    font-weight:500;
+    color:#333;
+}
 
-        nav a:hover {
-            color: #00c6ff;
-        }
+nav a:hover{
+    color:var(--accent);
+}
 
-        /* CONTAINER */
-        .container {
-            max-width: 1150px;
-            margin: auto;
-            padding: 0 20px;
-        }
+/* HERO */
+.hero{
+    padding:90px 0;
+}
 
-        /* HERO */
-        .editorial-hero {
-            background: #f1f4f8;
-            padding: 90px 0;
-        }
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
 
-        .editorial-hero h1 {
-            font-size: 44px;
-            margin-bottom: 18px;
-        }
+.hero h1{
+    font-size:46px;
+    margin-bottom:18px;
+}
 
-        .editorial-hero p {
-            font-size: 18px;
-            color: #444;
-            max-width: 850px;
-        }
+.hero p{
+    font-size:18px;
+    color:#555;
+    margin-bottom:28px;
+}
 
-        /* CONTENT */
-        .editorial-content {
-            padding: 70px 0;
-        }
+.hero a{
+    display:inline-block;
+    background:var(--primary);
+    color:#fff;
+    padding:14px 34px;
+    border-radius:28px;
+    font-weight:600;
+}
 
-        .editorial-content h2 {
-            font-size: 32px;
-            margin-bottom: 18px;
-        }
+.hero img{
+    width:100%;
+    border-radius:18px;
+}
 
-        .editorial-content p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 16px;
-        }
+/* SECTION */
+section{
+    padding:90px 0;
+}
 
-        /* FEATURED SERVICES */
-        .featured-services {
-            background: #ffffff;
-            padding: 80px 0;
-        }
+.section-title{
+    max-width:700px;
+    margin-bottom:50px;
+}
 
-        .featured-services h2 {
-            font-size: 34px;
-            margin-bottom: 40px;
-        }
+.section-title h2{
+    font-size:36px;
+    margin-bottom:10px;
+}
 
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
+.section-title p{
+    color:#666;
+}
 
-        .service-box {
-            background: #f8f9fb;
-            padding: 35px;
-            border-radius: 10px;
-            border-left: 6px solid #003566;
-        }
+/* SERVICES */
+.services{
+    background:var(--light);
+}
 
-        .service-box i {
-            font-size: 36px;
-            color: #003566;
-            margin-bottom: 15px;
-        }
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
 
-        .service-box h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
+.service-card{
+    background:#fff;
+    padding:34px;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
 
-        .service-box p {
-            font-size: 15px;
-            color: #555;
-        }
+.service-card img{
+    height:180px;
+    width:100%;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:18px;
+}
 
-        /* CAPABILITY STRIP */
-        .capability-strip {
-            background: #003566;
-            color: #fff;
-            padding: 55px 0;
-        }
+.service-card h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
 
-        .capability-strip .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-        }
+.service-card p{
+    font-size:15px;
+    color:#555;
+}
 
-        .capability h4 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
+/* SPLIT SECTION */
+.split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
 
-        .capability p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
+.split img{
+    width:100%;
+    border-radius:16px;
+}
 
-        /* CTA */
-        .cta-section {
-            background: #f1f4f8;
-            padding: 80px 0;
-            text-align: center;
-        }
+/* CTA */
+.cta{
+    background:var(--primary);
+    color:#fff;
+    text-align:center;
+}
 
-        .cta-section h2 {
-            font-size: 34px;
-            margin-bottom: 15px;
-        }
+.cta h2{
+    font-size:36px;
+    margin-bottom:14px;
+}
 
-        .cta-section p {
-            color: #555;
-            font-size: 16px;
-            margin-bottom: 25px;
-        }
+.cta p{
+    opacity:.9;
+}
 
-        .cta-btn {
-            background: #003566;
-            color: #fff;
-            padding: 15px 36px;
-            border-radius: 30px;
-            font-weight: 600;
-        }
+.cta a{
+    display:inline-block;
+    margin-top:22px;
+    background:#fff;
+    color:var(--primary);
+    padding:14px 36px;
+    border-radius:30px;
+    font-weight:600;
+}
 
-        .cta-btn:hover {
-            background: #001f3f;
-        }
+/* FOOTER */
+footer{
+    background:#071428;
+    color:#aaa;
+    text-align:center;
+    padding:26px;
+}
 
-        /* CONTACT */
-        .contact {
-            padding: 80px 0;
-        }
+@media(max-width:900px){
+    .hero-grid,
+    .split{
+        grid-template-columns:1fr;
+    }
 
-        .contact-box {
-            background: #ffffff;
-            padding: 45px;
-            border-radius: 14px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        .contact-box input,
-        .contact-box textarea {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
-
-        .contact-box button {
-            background: #003566;
-            color: #fff;
-            padding: 14px 32px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #0b1d3a;
-            color: #aaa;
-            text-align: center;
-            padding: 25px;
-        }
-
-        footer span {
-            color: #00c6ff;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 16px 25px;
-            }
-
-            nav a {
-                margin-left: 15px;
-                font-size: 14px;
-            }
-        }
-    </style>
+    .hero h1{
+        font-size:36px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">
-        <img src="assets/images/logo.png" alt="B16 Ventures Logo">
-        <span>B16 Ventures</span>
+    <div class="container navbar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="B16 Ventures">
+            <span>B16 Ventures</span>
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
 </header>
 
-<section class="editorial-hero" id="home">
-    <div class="container">
-        <h1>Trusted System Integrator in Bengaluru</h1>
-        <p>
-            B16 Ventures is a professional system integrator delivering secure,
-            scalable and future-ready CCTV, networking, biometric and access control
-            solutions for enterprises, institutions and residential communities.
-        </p>
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div>
+            <h1>Enterprise Network & Security Integration</h1>
+            <p>
+                B16 Ventures delivers secure, scalable and enterprise-grade
+                CCTV, networking, biometric and access control solutions
+                for modern organizations.
+            </p>
+            <a href="#contact">Talk to an Expert</a>
+        </div>
+        <img src="assets/images/hero-network.jpg" alt="Enterprise Networking">
     </div>
 </section>
 
-<section class="editorial-content">
+<!-- SERVICES -->
+<section class="services" id="services">
     <div class="container">
-        <h2>Driving Secure & Scalable Infrastructure</h2>
-        <p>
-            In an increasingly connected digital world, organizations require
-            reliable security and IT infrastructure. B16 Ventures partners with
-            businesses to design, deploy and maintain integrated systems that
-            ensure safety, efficiency and operational continuity.
-        </p>
-        <p>
-            Our solutions are engineered with enterprise-grade components,
-            industry best practices and long-term scalability in mind.
-        </p>
-    </div>
-</section>
-
-<section class="featured-services" id="services">
-    <div class="container">
-        <h2>Our Core System Integration Services</h2>
+        <div class="section-title">
+            <h2>Our System Integration Services</h2>
+            <p>Designed for performance, reliability and long-term scalability</p>
+        </div>
 
         <div class="service-grid">
-
-            <div class="service-box">
-                <i class="fas fa-video"></i>
-                <h3>CCTV Surveillance Systems</h3>
-                <p>Design, installation and maintenance of IP & analog CCTV systems with remote monitoring.</p>
+            <div class="service-card">
+                <img src="assets/images/cctv.jpg">
+                <h3>CCTV Surveillance</h3>
+                <p>IP & analog surveillance systems with monitoring and analytics.</p>
             </div>
 
-            <div class="service-box">
-                <i class="fas fa-network-wired"></i>
-                <h3>Structured Networking</h3>
-                <p>LAN, fiber cabling, Wi-Fi solutions, switches, racks and firewall-ready infrastructure.</p>
+            <div class="service-card">
+                <img src="assets/images/networking.jpg">
+                <h3>Networking</h3>
+                <p>LAN, Wi-Fi, fiber, switching and secure connectivity.</p>
             </div>
 
-            <div class="service-box">
-                <i class="fas fa-fingerprint"></i>
-                <h3>Biometric Attendance</h3>
-                <p>Fingerprint and face recognition attendance systems with reporting and payroll integration.</p>
+            <div class="service-card">
+                <img src="assets/images/biometric.jpg">
+                <h3>Biometric Systems</h3>
+                <p>Attendance and access automation using biometrics.</p>
             </div>
 
-            <div class="service-box">
-                <i class="fas fa-door-closed"></i>
-                <h3>Access Control Systems</h3>
-                <p>RFID, biometric and smart door access solutions for offices and residential complexes.</p>
+            <div class="service-card">
+                <img src="assets/images/access-control.jpg">
+                <h3>Access Control</h3>
+                <p>Smart door access with RFID and biometric technologies.</p>
             </div>
-
         </div>
     </div>
 </section>
 
-<section class="capability-strip">
-    <div class="container">
-        <div class="capability">
-            <h4>Enterprise-Grade Design</h4>
-            <p>Solutions aligned with global IT & security standards.</p>
-        </div>
-        <div class="capability">
-            <h4>End-to-End Execution</h4>
-            <p>Consultation, deployment, testing and support.</p>
-        </div>
-        <div class="capability">
-            <h4>Experienced Engineers</h4>
-            <p>Certified professionals with hands-on expertise.</p>
+<!-- SPLIT CONTENT -->
+<section>
+    <div class="container split">
+        <img src="assets/images/networking.jpg" alt="Data Center">
+        <div>
+            <h2>Built for Enterprise Environments</h2>
+            <p>
+                Our solutions follow industry best practices and are
+                designed to integrate seamlessly into enterprise
+                IT and security ecosystems.
+            </p>
         </div>
     </div>
 </section>
 
-<section class="cta-section">
+<!-- CTA -->
+<section class="cta" id="contact">
     <div class="container">
-        <h2>Looking for a Reliable System Integrator?</h2>
-        <p>Partner with B16 Ventures to build secure and scalable infrastructure.</p>
-        <a href="#contact" class="cta-btn">Request Consultation</a>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <div class="container">
-        <div class="contact-box">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="tel" placeholder="Phone Number">
-                <textarea rows="4" placeholder="Your Requirement"></textarea>
-                <button type="submit">Send Enquiry</button>
-            </form>
-        </div>
+        <h2>Let’s Build Secure Infrastructure</h2>
+        <p>Partner with B16 Ventures for enterprise-ready solutions.</p>
+        <a href="mailto:info@b16ventures.com">Contact Us</a>
     </div>
 </section>
 
 <footer>
-    © 2026 <span>B16 Ventures</span> | System Integrator – Bengaluru
+    © 2026 B16 Ventures | System Integrator – Bengaluru
 </footer>
 
 </body>

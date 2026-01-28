@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
 <meta name="description" content="B16 Ventures provides enterprise CCTV, Networking, Biometric and Access Control solutions in Bengaluru.">
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
@@ -18,358 +18,220 @@
     --text:#222;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;}
+h1,h2,h3,.logo span{font-family:'Space Grotesk',sans-serif;}
 
-body{
-    color:var(--text);
-    background:#fff;
-    line-height:1.6;
-}
+.container{max-width:1240px;margin:auto;padding:0 28px;}
 
-.container{
-    max-width:1240px;
-    margin:auto;
-    padding:0 28px;
-}
-
-/* ================= PREMIUM HEADER ================= */
+/* HEADER */
 header{
-    background:#ffffff;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    position:sticky;top:0;z-index:1000;
+    background:#fff;
     box-shadow:0 4px 18px rgba(0,0,0,.06);
 }
-
-.navbar{
-    height:86px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-/* LOGO */
-.logo{
-    display:flex;
-    align-items:center;
-    gap:14px;
-}
-
-.logo img{
-    height:86px;
-    background:#fff;
-    padding:04px;
-    border-radius:12px;
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
-}
-
-.logo span{
-    position:relative;
-}
-
-.logo span::after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:-8px;
-    width:40%;
-    height:6px;
-    background:linear-gradient(90deg,#0056b3,#0b1d3a);
-    border-radius:4px;
-}
-
-/* NAV */
-nav{
-    display:flex;
-    align-items:center;
-    gap:26px;
-}
-
-nav a{
-    font-size:15px;
-    font-weight:500;
-    color:#222;
-    text-decoration:none;
-    position:relative;
-}
-
-/* underline hover */
+.navbar{height:86px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo img{height:70px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.15);}
+nav{display:flex;align-items:center;gap:26px;}
+nav a{text-decoration:none;color:#222;font-weight:500;position:relative;}
 nav a::after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:0;
-    height:2px;
-    background:var(--primary);
-    transition:.3s ease;
+    content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;
+    background:var(--primary);transition:.3s;
 }
-
-nav a:hover::after{
-    width:100%;
-}
-
-/* PHONE CTA */
+nav a:hover::after{width:100%;}
 .phone{
-    padding:10px 18px;
-    border-radius:30px;
+    padding:10px 18px;border-radius:30px;
     background:linear-gradient(135deg,#0b1d3a,#001f3f);
-    color:#fff !important;
-    font-weight:600;
-    box-shadow:0 8px 20px rgba(11,29,58,.35);
-    transition:.3s ease;
+    color:#fff !important;font-weight:600;
 }
 
-.phone i{
-    margin-right:6px;
-}
-
-.phone:hover{
-    transform:translateY(-2px);
-    box-shadow:0 12px 28px rgba(11,29,58,.45);
-}
-
-/* MOBILE */
-@media(max-width:900px){
-    .navbar{
-        flex-direction:column;
-        height:auto;
-        padding:16px 0;
-        gap:12px;
-    }
-
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:16px;
-    }
-}
-
-
-/* ================= HERO ================= */
-.hero{ padding:90px 0; }
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.hero h1{
-    font-size:46px;
-    margin-bottom:18px;
-}
-
-.hero p{
-    font-size:18px;
-    color:#555;
-    margin-bottom:28px;
-}
-
+/* HERO */
+.hero{padding:90px 0;}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center;}
+.hero h1{font-size:46px;margin-bottom:18px;}
+.hero p{font-size:18px;color:#555;margin-bottom:28px;}
 .hero a{
-    display:inline-block;
-    background:var(--primary);
-    color:#fff;
-    padding:14px 34px;
-    border-radius:28px;
-    font-weight:600;
-    text-decoration:none;
+    background:var(--primary);color:#fff;
+    padding:14px 34px;border-radius:28px;
+    text-decoration:none;font-weight:600;
 }
-
 .hero img{
-    width:100%;
-    border-radius:18px;
+    width:100%;border-radius:18px;
+    transition:transform 1.2s ease;
+}
+.hero:hover img{
+    transform:perspective(1000px) rotateY(-7deg) scale(1.06);
 }
 
-/* ================= SECTION ================= */
-section{ padding:90px 0; }
-
-.section-title{
-    max-width:700px;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:36px;
-    margin-bottom:10px;
-}
-
-.section-title p{ color:#666; }
-
-/* ================= SERVICES ================= */
-.services{ background:var(--light); }
-
+/* SERVICES */
+.services{background:var(--light);padding:90px 0;}
+.section-title{max-width:700px;margin-bottom:50px;}
+.section-title h2{font-size:36px;}
 .service-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:30px;
 }
-
 .service-card{
-    background:#fff;
-    padding:34px;
-    border-radius:16px;
+    background:#fff;padding:34px;border-radius:16px;
     box-shadow:0 8px 20px rgba(0,0,0,.06);
+    transition:.4s;
 }
-
-.service-card img{
-    height:180px;
-    width:100%;
-    object-fit:cover;
-    border-radius:12px;
-    margin-bottom:18px;
-}
-
-.service-card h3{
-    font-size:20px;
-    margin-bottom:10px;
-}
-
-.service-card p{
-    font-size:15px;
-    color:#555;
-}
-
-/* ================= ENQUIRY ================= */
-.enquiry-section{ background:#f4f6f9; }
-
-.enquiry-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.enquiry-info h2{
-    font-size:36px;
-    margin-bottom:12px;
-}
-
-.enquiry-info p{
-    color:#555;
-    font-size:16px;
-}
-
-.contact-highlight{
-    margin-top:20px;
-    font-size:18px;
-}
-
-.contact-highlight a{
-    color:#0b1d3a;
-    font-weight:600;
-    text-decoration:none;
-}
-
-.enquiry-form{
-    background:#fff;
-    padding:40px;
-    border-radius:18px;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-}
-
-.enquiry-form input,
-.enquiry-form select,
-.enquiry-form textarea{
-    width:100%;
-    padding:14px 16px;
-    margin-bottom:14px;
-    border-radius:8px;
-    border:1px solid #ccc;
-    font-size:15px;
-}
-
-.enquiry-form button{
-    width:100%;
-    padding:14px;
-    background:#0b1d3a;
-    color:#fff;
-    border:none;
-    border-radius:30px;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-}
-
-.enquiry-form button:hover{ background:#001f3f; }
-
-/* ================= FOOTER ================= */
-footer{
-    background:#071428;
-    color:#aaa;
-    text-align:center;
-    padding:26px;
-}
-
-/* ================= WHATSAPP FLOAT ================= */
-.whatsapp-float{
-    position:fixed;
-    right:24px;
-    bottom:24px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    color:#fff;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:32px;
-    box-shadow:0 6px 20px rgba(0,0,0,.3);
-    z-index:9999;
-    animation:pulse 2.8s infinite;
-}
-
-@keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
-    70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
-    100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
-}
-
-/* ================= ANIMATION + 3D ================= */
-.animate{
-    opacity:0;
-    transform:translateY(40px);
-    transition:all .9s ease;
-}
-
-.animate.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-.service-card,
-.enquiry-form{
-    transition:transform .45s ease, box-shadow .45s ease;
-}
-
-.service-card:hover,
-.enquiry-form:hover{
+.service-card:hover{
     transform:translateY(-12px) scale(1.03);
     box-shadow:0 22px 45px rgba(0,0,0,.18);
 }
-
-.hero img{
-    transition:transform 1.2s ease;
+.service-card img{
+    width:100%;height:180px;object-fit:cover;
+    border-radius:12px;margin-bottom:18px;
 }
 
-.hero:hover img{
-    transform:perspective(1000px) rotateY(-7deg) scale(1.06);
+/* ================= CONTACT SECTION ================= */
+.contact-section{
+    padding:90px 0;
+    background:#f7f9fb;
 }
 
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:0;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+}
+
+/* LEFT PANEL */
+.contact-info{
+    background:#ededed;
+    padding:50px 45px;
+}
+
+.contact-info h2{
+    font-size:26px;
+    margin-bottom:35px;
+    color:#00a3d9;
+    position:relative;
+}
+
+.contact-info h2::after{
+    content:'';
+    width:40px;
+    height:2px;
+    background:#ff6b3d;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+}
+
+.info-item{
+    display:flex;
+    gap:18px;
+    margin-bottom:30px;
+}
+
+.info-item .icon{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:2px solid #0b1d3a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0b1d3a;
+    font-size:18px;
+    flex-shrink:0;
+}
+
+.info-item h4{
+    font-size:15px;
+    margin-bottom:6px;
+    color:#000;
+}
+
+.info-item p{
+    font-size:14px;
+    color:#444;
+    line-height:1.6;
+}
+
+/* RIGHT PANEL */
+.contact-form{
+    background:#ffffff;
+    padding:50px 55px;
+}
+
+.contact-form h2{
+    font-size:26px;
+    color:#00a3d9;
+    margin-bottom:35px;
+    position:relative;
+}
+
+.contact-form h2::after{
+    content:'';
+    width:40px;
+    height:2px;
+    background:#ff6b3d;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-bottom:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px 14px;
+    font-size:14px;
+    border:1px solid #cfcfcf;
+    outline:none;
+}
+
+.contact-form textarea{
+    resize:none;
+    margin-bottom:22px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#00a3d9;
+}
+
+.contact-form button{
+    background:#00a3d9;
+    color:#fff;
+    padding:12px 30px;
+    border:none;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:#008bb8;
+}
+
+/* RESPONSIVE */
 @media(max-width:900px){
-    .hero-grid,
-    .enquiry-grid{
+    .contact-grid{
         grid-template-columns:1fr;
     }
+}
 
-    .hero h1{ font-size:36px; }
+/* FOOTER */
+footer{background:#071428;color:#aaa;text-align:center;padding:26px;}
+
+@media(max-width:900px){
+    .hero-grid,.enquiry-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:36px;}
 }
 </style>
 </head>
@@ -379,10 +241,11 @@ footer{
 <header>
     <div class="container navbar">
         <div class="logo">
-            <img src="assets/images/logo.png" alt="B16 Ventures">
+            <img src="assets/images/logo.png">
             <span>B16 Ventures</span>
         </div>
         <nav>
+            <a href="about.html">About</a>
             <a href="#services">Services</a>
             <a href="#enquiry">Contact</a>
             <a href="tel:+919169168216" class="phone">
@@ -392,115 +255,104 @@ footer{
     </div>
 </header>
 
-
 <section class="hero">
-    <div class="container hero-grid animate">
+    <div class="container hero-grid">
         <div>
             <h1>Enterprise Network & Security Integration</h1>
-            <p>
-                Secure, scalable CCTV, networking, biometric and access
-                control solutions for modern enterprises.
-            </p>
+            <p>Secure, scalable CCTV, networking, biometric and access control solutions.</p>
             <a href="#enquiry">Talk to an Expert</a>
         </div>
-        <img src="assets/images/hero-network.jpg" alt="Enterprise Networking">
+        <img src="assets/images/hero-network.jpg">
     </div>
 </section>
 
 <section class="services" id="services">
     <div class="container">
-        <div class="section-title animate">
+        <div class="section-title">
             <h2>Our Services</h2>
             <p>Enterprise-grade system integration</p>
         </div>
-
         <div class="service-grid">
-            <div class="service-card animate">
-                <img src="assets/images/cctv.jpg">
-                <h3>CCTV Surveillance</h3>
-                <p>IP and analog surveillance solutions.</p>
-            </div>
-
-            <div class="service-card animate">
-                <img src="assets/images/networking.jpg">
-                <h3>Networking</h3>
-                <p>LAN, Wi-Fi & structured cabling.</p>
-            </div>
-
-            <div class="service-card animate">
-                <img src="assets/images/biometric.jpg">
-                <h3>Biometric Systems</h3>
-                <p>Attendance and identity solutions.</p>
-            </div>
-
-            <div class="service-card animate">
-                <img src="assets/images/access-control.jpg">
-                <h3>Access Control</h3>
-                <p>RFID & biometric door access.</p>
-            </div>
+            <div class="service-card"><img src="assets/images/cctv.jpg"><h3>CCTV Surveillance</h3></div>
+            <div class="service-card"><img src="assets/images/networking.jpg"><h3>Networking</h3></div>
+            <div class="service-card"><img src="assets/images/biometric.jpg"><h3>Biometric Systems</h3></div>
+            <div class="service-card"><img src="assets/images/access-control.jpg"><h3>Access Control</h3></div>
         </div>
     </div>
 </section>
 
-<section class="enquiry-section" id="enquiry">
-    <div class="container enquiry-grid">
-        <div class="enquiry-info animate">
-            <h2>Enquiry Form</h2>
-            <p>Our team will contact you shortly.</p>
+<section class="contact-section" id="enquiry">
+    <div class="container contact-grid">
 
-            <p class="contact-highlight">
-                📞 <a href="tel:+919169168216">+91-916 916 8216</a><br>
-                💬 <a href="https://wa.me/919169168216" target="_blank">WhatsApp Us</a><br>
-                ✉️ <a href="mailto:info@b16ventures.com">info@b16ventures.com</a>
-            </p>
+        <!-- LEFT : CONTACT INFO -->
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+
+            <div class="info-item">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                    <h4>Our Phone Numbers</h4>
+                    <p>Mobile: +91 916 916 8216</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                    <h4>Our Email</h4>
+                    <p>info@b16ventures.com</p>
+                    <p>support@b16ventures.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                    <h4>Corporate Office</h4>
+                    <p>
+                        B16 Ventures<br>
+                        Ramamurthy Nagar<br>
+                        Bengaluru, Karnataka<br>
+                        India – 560016
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <form class="enquiry-form animate"
-              action="https://formspree.io/f/xkorzwjl"
-              method="POST">
+        <!-- RIGHT : FORM -->
+        <div class="contact-form">
+            <h2>Drop Us A Line</h2>
 
-            <input type="hidden" name="_redirect" value="thank-you.html">
-            <input type="hidden" name="_subject" value="New Enquiry - B16 Ventures">
-            <input type="text" name="_gotcha" style="display:none">
+            <form action="https://formspree.io/f/xkorzwjl" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Full Name *" required>
+                    <input type="email" name="email" placeholder=" Email Address *" required>
+                </div>
 
-            <input type="text" name="name" placeholder="Full Name *" required>
-            <input type="email" name="email" placeholder="Email Address *" required>
-            <input type="tel" name="phone" placeholder="Phone Number">
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder=" Phone number *" required>
+                    <input type="text" name="Location" placeholder="Location *" required>
+                </div>
 
-            <select name="service" required>
-                <option value="">Select Service</option>
-                <option>CCTV Surveillance</option>
-                <option>Networking</option>
-                <option>Biometric Systems</option>
-                <option>Access Control</option>
-            </select>
+                <textarea name="message" rows="4" placeholder="Describe your requirements"></textarea>
 
-            <textarea name="message" rows="4" placeholder="Describe your requirement"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
 
-            <button type="submit">Submit Enquiry</button>
-        </form>
     </div>
 </section>
+
 
 <footer>
-    © 2026 B16 Ventures | All rights reserved. Developed By NN
+    Copyright © 2026 B16 Ventures | All rights reserved | Developed by NN
 </footer>
-
-<a href="https://wa.me/919169168216" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-const animatedItems = document.querySelectorAll('.animate');
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    });
-},{threshold:0.2});
-animatedItems.forEach(el=>observer.observe(el));
-</script>
 
 </body>
 </html>
